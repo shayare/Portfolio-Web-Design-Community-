@@ -19,25 +19,38 @@ body{
     width: 100%;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
+
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #5b5c86;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid #5b5c86;
+  }
 
 /*======imagens de fundo======*/
 
 
-.illustration-bottom svg{
+.illustration-bottom{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20rem;
+}
+
+.illustration-top{
     position: absolute;
     top: 0;
     z-index: -100;
-    display: flex;
-}
-
-.illustration-top svg{
-    position: absolute;
-    top: 0; /*deixa a imagem bem em cima*/
-    margin-left: -8rem;
-    width: 37.2rem;
-    height: 43.7rem;
-    z-index: -100;
+    left: 0;
 }
 
 /*======header======*/
@@ -72,6 +85,7 @@ header ul picture svg{
 
 main{
     width: 100%;
+    height: 65rem;
 }
 
 /*======menu======*/
@@ -80,13 +94,12 @@ menu{
     float: left;
     margin-left: auto;
     position: absolute;
-    padding-top: 7rem;
-    position: relative;
+    padding-top: 4rem;
 }
 
 menu .menu-container{
-    width: 4vw;
-    height: 70vh;
+    width: 4.5rem;
+    height: 44rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,35 +108,68 @@ menu .menu-container{
 menu .menu-container ul li a svg{
     max-width: 4rem;
     max-height: 4rem;
-    margin: 2rem 0;
+    position: absolute;
+    position: relative;
 }
 
 menu .fundo{
-    /*filter: blur(1px);*/
+    /* filter: blur(1px);*/
     /* opacity: 0.5; */
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(11.5757px);
     border-radius: 0 22px 22px 0;
-    width: 4vw;
-    height: 70vh;
+    width: 4.5rem;
+    height: 44rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-menu .menu-container ul li a svg:hover{
-    background: #0F103F;
+menu .menu-container ul li{
     width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    
+}
+
+menu .menu-container ul li a{
+    border-right: 5px solid transparent;
+}
+
+menu .menu-container ul li a:hover{
+    background: #727190;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    /* border-radius: 100px 0 0 100px; */
+    /* clip-path: polygon(8% 50%, 100% 100%, 100% 0); */
+    border-radius: 100% 0% 0% 100% / 50% 0% 100% 50%;
+}
+
+menu .menu-container ul li a:hover path{
+    fill: white;
+}
+
+menu .menu-container ul li a::after{
+    transform: rotate(360px);
+}
+
+header ul li a:hover{
+    color: #2bd6b6;
 }
 
 /* ======section center====== */
 
 section.center{
-    max-width: 58rem;
     width: 100%;
     position: absolute;
-    transform: translateX(17.7rem) translateY(15rem);
+    transform: translateX(-8rem) translateY(25rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
+    margin: auto;
 }
 
 section.center h1{
@@ -221,5 +267,33 @@ section.center .center_btn2{
 
 #btn_neon:hover::before{
     width: 100%;
+}
+
+/*======= about-me =======*/
+
+.about-me picture{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40rem;
+}
+
+.about-me picture#about_image svg{
+    width: 63rem;
+    position: absolute;
+    z-index: 10;
+}
+
+#arco_about-me svg{
+    position: absolute;
+    margin-top: -20rem;
+}
+
+#diamont svg{
+    position: absolute;
+    margin-top: -90rem;
+    margin-left: 60rem;
+    z-index: 11;
 }
 
