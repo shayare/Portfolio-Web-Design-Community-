@@ -11,6 +11,10 @@
     color: white;
 }
 
+/*===================================
+            <!--Body-->
+  ===================================*/
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #0F103F;
@@ -20,30 +24,33 @@ body{
     flex-direction: column;
     align-items: center;
     position: relative;
+    z-index:-1000;
 }
 
 body::-webkit-scrollbar {
     width: 12px;
-  }
+}
   
-  body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background: #5b5c86;
-  }
+}
   
-  body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 20px;
     border: 3px solid #5b5c86;
-  }
+}
 
-/*======imagens de fundo======*/
-
+/*===================================
+        <!--Imagens de fundo-->
+  ===================================*/
 
 .illustration-bottom{
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 20rem;
+    margin-top: 21.1rem;
+    z-index:-101;
 }
 
 .illustration-top{
@@ -53,7 +60,59 @@ body::-webkit-scrollbar {
     left: 0;
 }
 
-/*======header======*/
+.circulo-recent-work{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 180.2rem;
+    z-index: -15;
+}
+
+.working{
+    position: absolute;
+    top: 256.2rem;
+    margin-left: -800px;
+    z-index:200;
+}
+
+.planet{
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+    right: 0;
+}
+
+.Illustration{
+    position: absolute;
+    bottom: 0;
+    z-index: 110;
+    left: 0;
+    bottom: 17.1rem;
+}
+
+.about-me picture#about_image img{
+    width: 63rem;
+    position: absolute;
+    z-index: 10;
+}
+
+#arco_about-me img{
+    position: absolute;
+    margin-top: 30rem;
+}
+
+#diamont img{
+    position: absolute;
+    margin-top: 70rem;
+    margin-left: 60rem;
+    z-index: 11;
+}
+
+/*===================================
+            <!--Header-->
+  ===================================*/
 
 header{
     display: flex;
@@ -69,10 +128,7 @@ header ul{
     font-size: 1.7rem;
     justify-content: center;
     align-items: center;
-}
-
-header ul li a{
-    text-decoration: none;
+    font-weight: 500;
 }
 
 header ul picture svg{
@@ -81,89 +137,67 @@ header ul picture svg{
     align-items: center;
 }
 
-/*======main======*/
-
-main{
-    width: 100%;
-    height: 65rem;
-}
-
-/*======menu======*/
-
-menu{
-    float: left;
-    margin-left: auto;
-    position: absolute;
-    padding-top: 4rem;
-}
-
-menu .menu-container{
-    width: 4.5rem;
-    height: 44rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-menu .menu-container ul li a svg{
-    max-width: 4rem;
-    max-height: 4rem;
-    position: absolute;
-    position: relative;
-}
-
-menu .fundo{
-    /* filter: blur(1px);*/
-    /* opacity: 0.5; */
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(11.5757px);
-    border-radius: 0 22px 22px 0;
-    width: 4.5rem;
-    height: 44rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-menu .menu-container ul li{
-    width: 100%;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-    
-}
-
-menu .menu-container ul li a{
-    border-right: 5px solid transparent;
-}
-
-menu .menu-container ul li a:hover{
-    background: #727190;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    /* border-radius: 100px 0 0 100px; */
-    /* clip-path: polygon(8% 50%, 100% 100%, 100% 0); */
-    border-radius: 100% 0% 0% 100% / 50% 0% 100% 50%;
-}
-
-menu .menu-container ul li a:hover path{
-    fill: white;
-}
-
-menu .menu-container ul li a::after{
-    transform: rotate(360px);
+header ul li a{
+    text-decoration: none;
 }
 
 header ul li a:hover{
     color: #2bd6b6;
 }
 
-/* ======section center====== */
+/*===================================
+            <!--Main-->
+  ===================================*/
+
+main{
+    width: 100%;
+    height:102.4rem;
+}
+
+/*===================================
+            <!--Menu-->
+  ===================================*/
+
+menu{
+    float: left;
+    margin-left: auto;
+    position: absolute;
+    z-index: 100;
+}
+
+menu .fundo{
+    background: url('img/Background.svg') rgba(255,255,255,0.4);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0px 39.8736px 39.8736px rgba(69, 42, 124, 0.15);
+    backdrop-filter: blur(10.054px);
+    display: flex;
+    flex-direction: column; 
+    width: 8rem;
+    height: 70rem;
+    border-radius: 0 5rem 5rem 0;
+    margin: 7.7rem 0 0 0;
+}
+
+menu .menu-container ul{
+    width: 8rem;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1.8rem;
+    gap: 8rem;
+}
+
+/*===================================
+        <!--Section (center)-->
+  ===================================*/
 
 section.center{
     width: 100%;
     position: absolute;
-    transform: translateX(-8rem) translateY(25rem);
+    transform: translateX(-6rem) translateY(27rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,9 +207,11 @@ section.center{
 }
 
 section.center h1{
-    width: 58rem;
-    font-size: 5rem;
-    word-break: break-word;
+    width: 72rem;
+    font-size: 6rem;
+    word-break: break-word; /*quebra de texto*/
+    line-height: 1.3;
+    padding-bottom: 3rem;
 }
 
 .center_btn2 button{
@@ -184,13 +220,14 @@ section.center h1{
     backdrop-filter: blur(11.2px);
     width: 20rem;
     height: 5rem;
+    font-family: 'Poppins';
     border-radius: 3rem;
+    border: none;
 }
 
 section.center .center_btn2{
-    gap: 2rem;
+    gap: 4rem;
     display: flex;
-    gap: 2rem;
     padding-top: 3rem;
 }
 
@@ -269,31 +306,320 @@ section.center .center_btn2{
     width: 100%;
 }
 
-/*======= about-me =======*/
+/*===================================
+        <!--Section (About-me)-->
+  ===================================*/
+
+.about-me{
+    height:102.4rem;
+    margin-top:20rem;
+}
 
 .about-me picture{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40rem;
+    margin-left: -40px;
 }
 
-.about-me picture#about_image svg{
-    width: 63rem;
-    position: absolute;
+/*===================================
+    <!--Section (Recent-work)-->
+  ===================================*/
+
+section .recent-work{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:39.8rem;
+    height:102.4rem;
+    margin-top: -35rem;
+}
+
+section .recent-work picture{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .recent-work picture:nth-child(1){
+    display:flex;
+    border-radius: 3rem;
+}
+
+section .recent-work picture:hover{
+    transform: scale(1.1);
+    transition:1s;   
+    background: linear-gradient(270deg, #610d61, #19cabc, #ffd03e);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
     z-index: 10;
 }
 
-#arco_about-me svg{
-    position: absolute;
-    margin-top: -20rem;
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
-#diamont svg{
-    position: absolute;
-    margin-top: -90rem;
-    margin-left: 60rem;
-    z-index: 11;
+section .recent-work picture:nth-child(2){
+    width: 44rem;  
+    position:absolute;
+    border-radius: 3rem;
 }
 
+section .recent-work picture:nth-child(3){
+    display:flex;
+    border-radius: 3rem;
+}
+
+/*===================================
+        <!--Section (Contato)-->
+  ===================================*/
+
+.contato-fundo{
+    height:102.4rem;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-fundo .contato{
+    width: 90rem;
+    height: 60rem;
+    background: rgba(47,47,138, 0.6);
+    backdrop-filter: blur(10.000px);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-container{
+    width: 90rem;
+    height: 60rem;
+    gap: 12.1rem;
+    display:flex;
+    padding: 5.3rem 9rem;
+}
+
+.get_in_touch{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.get_in_touch h1, .send_me h1{
+    font-size: 2.4rem;
+    padding-bottom: 1.9rem;
+}
+
+.get_in_touch #p_touch{
+    font-size: 1.7rem;
+    padding-bottom: 6.8rem;
+}
+
+.email-contato{
+    display:flex;
+    flex-direction: column;
+    height: 9.4rem;
+    justify-content: center;
+}
+
+.tel, .email{
+    display:flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.get_in_touch picture{
+    display:flex;
+    align-items: center;
+}
+
+/*===================================
+        <!--Section (Send-me)-->
+  ===================================*/
+
+.send_me{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+input#input_pqn{
+    width: 34rem;
+    height: 4rem;
+    color:white;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 1rem;
+    font-family: 'Poppins';
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+input#input_gnd{
+    width: 34rem;
+    height: 20rem;
+    color:white;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 1rem;
+    font-family: 'Poppins';
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.send_me button{
+    width: 16rem;
+    height: 4rem;
+    background: rgb(201,97,222);
+    background: linear-gradient(160deg, rgba(201,97,222,1) 21%, rgba(41,84,163,1) 83%);
+    border-radius: 1rem;
+    border: none;
+    font-family: 'Poppins';
+}
+
+.send_me button:hover{
+    transform: scale(1.1);
+}
+
+/*===================================
+            <!--Footer-->
+  ===================================*/
+
+footer{
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    z-index: 100;
+    background: rgba(47,47,138, 0.6);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(5.8rem + 6rem + 4.4rem);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10.8rem;
+}
+
+.footer_menu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    height: 4.4rem;
+}
+
+.footer_menu a{
+    text-decoration: none;
+}
+
+.footer_menu a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+}
+
+.footer_menu a:hover p, img{
+    color: #19cabc;
+}
+
+.footer_menu .footer_menu-container picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social .footer-social-container:hover{
+    width: 200px;    
+}
+
+.footer-social .footer-social-container{
+    font-family: 'Poppins';
+    height: 60px;
+    width: 60px;
+    float: left;
+    overflow: hidden;
+    margin: 0 5px;
+    border-radius: 50px;
+    background-color: #0F103F;
+    transition: all 0.3s ease-out;
+    display:flex;
+}
+
+.footer-social .footer-social-container span{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px; 
+    cursor: pointer;
+}
+
+.footer-social .footer-social-container a{
+    cursor: pointer;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    align-items: center;
+    line-height: 60px;
+}
+
+.footer-social .footer-social-container a img{
+    height: 60px;
+    width: 60px;
+}
+
+.footer-social .footer-social-container:hover{  
+    background: linear-gradient(270deg, #610d61, #19cabc, #ffd03e);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
+}
+
+#p-footer{
+    width: 100%;
+    text-align: right;
+    font-size: 1.5em;
+    padding-right: 3.9rem;
+    margin-bottom: 3.6rem;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+hr{
+    opacity: 0.7;
+    width: 90%;
+}
